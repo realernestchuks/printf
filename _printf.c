@@ -7,6 +7,7 @@ void print_buff(char buff[], int *buff_ind);
  * @format: Format string.
  * Return: Always return number of characters printed.
  */
+int _printf(const char *format, ...)
 {
 int i, printed = 0, printed_chars = 0;
 int flag, wid, prec, area, buff_ind = 0;
@@ -55,6 +56,7 @@ return (printed_chars);
  * @buff: Array of characters.
  * @buff_ind: Index at which to add the next character, represents the length.
  */
+void print_buff(char buff[], int *buff_ind)
 {
 if (*buff_ind > 0)
 write(1, &buff[0], *buff_ind);
